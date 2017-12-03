@@ -1,0 +1,250 @@
+***Pass {
+		Name "FORWARD"
+		Tags { "LightMode" = "ForwardBase" }
+###Program "vp" {
+1.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+2.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+3.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+4.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+5.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+6.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+7.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+8.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+9.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+10.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+11.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+12.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+13.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+14.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+15.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+16.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+17.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+18.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+19.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+20.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+21.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+22.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+23.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+24.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+25.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+26.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+27.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+28.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+29.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+30.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+31.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" "VERTEXLIGHT_ON" }
+32.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" "VERTEXLIGHT_ON" }
+33.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" "VERTEXLIGHT_ON" }
+34.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" "VERTEXLIGHT_ON" }
+35.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" "VERTEXLIGHT_ON" }
+36.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" "VERTEXLIGHT_ON" }
+37.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" "VERTEXLIGHT_ON" }
+38.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" "VERTEXLIGHT_ON" }
+39.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" "VERTEXLIGHT_ON" }
+40.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" "VERTEXLIGHT_ON" }
+###Program "fp" {
+1.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+2.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+3.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+4.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+5.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+6.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+7.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+8.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+9.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+10.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+11.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+12.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+13.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+14.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+15.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_OFF" }
+16.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+17.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+18.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+19.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+20.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+21.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+22.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+23.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+24.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+25.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+26.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+27.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+28.SubProgram "gles " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+29.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+30.SubProgram "flash " {
+Keywords { "DIRECTIONAL" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" "SHADOWS_SCREEN" }
+***	Pass {
+Name "FORWARD"
+Tags { "LightMode" = "ForwardAdd" }
+###Program "vp" {
+1.SubProgram "opengl " {
+Keywords { "POINT" }
+2.SubProgram "d3d9 " {
+Keywords { "POINT" }
+3.SubProgram "gles " {
+Keywords { "POINT" }
+4.SubProgram "glesdesktop " {
+Keywords { "POINT" }
+5.SubProgram "flash " {
+Keywords { "POINT" }
+6.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" }
+7.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" }
+8.SubProgram "gles " {
+Keywords { "DIRECTIONAL" }
+9.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" }
+10.SubProgram "flash " {
+Keywords { "DIRECTIONAL" }
+11.SubProgram "opengl " {
+Keywords { "SPOT" }
+12.SubProgram "d3d9 " {
+Keywords { "SPOT" }
+13.SubProgram "gles " {
+Keywords { "SPOT" }
+14.SubProgram "glesdesktop " {
+Keywords { "SPOT" }
+15.SubProgram "flash " {
+Keywords { "SPOT" }
+16.SubProgram "opengl " {
+Keywords { "POINT_COOKIE" }
+17.SubProgram "d3d9 " {
+Keywords { "POINT_COOKIE" }
+18.SubProgram "gles " {
+Keywords { "POINT_COOKIE" }
+19.SubProgram "glesdesktop " {
+Keywords { "POINT_COOKIE" }
+20.SubProgram "flash " {
+Keywords { "POINT_COOKIE" }
+21.SubProgram "opengl " {
+Keywords { "DIRECTIONAL_COOKIE" }
+22.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL_COOKIE" }
+23.SubProgram "gles " {
+Keywords { "DIRECTIONAL_COOKIE" }
+24.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL_COOKIE" }
+25.SubProgram "flash " {
+Keywords { "DIRECTIONAL_COOKIE" }
+###Program "fp" {
+1.SubProgram "opengl " {
+Keywords { "POINT" }
+2.SubProgram "d3d9 " {
+Keywords { "POINT" }
+3.SubProgram "gles " {
+Keywords { "POINT" }
+4.SubProgram "glesdesktop " {
+Keywords { "POINT" }
+5.SubProgram "flash " {
+Keywords { "POINT" }
+6.SubProgram "opengl " {
+Keywords { "DIRECTIONAL" }
+7.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL" }
+8.SubProgram "gles " {
+Keywords { "DIRECTIONAL" }
+9.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL" }
+10.SubProgram "flash " {
+Keywords { "DIRECTIONAL" }
+11.SubProgram "opengl " {
+Keywords { "SPOT" }
+12.SubProgram "d3d9 " {
+Keywords { "SPOT" }
+13.SubProgram "gles " {
+Keywords { "SPOT" }
+14.SubProgram "glesdesktop " {
+Keywords { "SPOT" }
+15.SubProgram "flash " {
+Keywords { "SPOT" }
+16.SubProgram "opengl " {
+Keywords { "POINT_COOKIE" }
+17.SubProgram "d3d9 " {
+Keywords { "POINT_COOKIE" }
+18.SubProgram "gles " {
+Keywords { "POINT_COOKIE" }
+19.SubProgram "glesdesktop " {
+Keywords { "POINT_COOKIE" }
+20.SubProgram "flash " {
+Keywords { "POINT_COOKIE" }
+21.SubProgram "opengl " {
+Keywords { "DIRECTIONAL_COOKIE" }
+22.SubProgram "d3d9 " {
+Keywords { "DIRECTIONAL_COOKIE" }
+23.SubProgram "gles " {
+Keywords { "DIRECTIONAL_COOKIE" }
+24.SubProgram "glesdesktop " {
+Keywords { "DIRECTIONAL_COOKIE" }
+25.SubProgram "flash " {
+Keywords { "DIRECTIONAL_COOKIE" }

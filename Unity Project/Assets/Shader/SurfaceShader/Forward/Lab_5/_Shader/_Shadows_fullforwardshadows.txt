@@ -1,0 +1,276 @@
+****Pass {	
+Name "FORWARD"
+Tags { "LightMode" = "ForwardBase" }
+###Program "vp" {
+	1.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+	2.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+	3.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+	4.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+	5.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+	6.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+	7.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+	8.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+	9.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" "VERTEXLIGHT_ON" }
+	10.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" "VERTEXLIGHT_ON" }
+	11.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" "VERTEXLIGHT_ON" }
+	12.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" "VERTEXLIGHT_ON" }
+	13.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" "VERTEXLIGHT_ON" }
+	14.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" "VERTEXLIGHT_ON" }
+	15.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" "VERTEXLIGHT_ON" }
+	16.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" "VERTEXLIGHT_ON" }
+###
+###Program "fp" {
+	1.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+	2.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+	3.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+	4.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_OFF" }
+	5.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+	6.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+	7.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+	8.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "SHADOWS_SCREEN" }
+***Pass {
+Name "FORWARD"
+Tags { "LightMode" = "ForwardAdd" }
+###Program "vp" {
+	1.SubProgram "opengl " {
+	Keywords { "POINT" "SHADOWS_OFF" }
+	2.SubProgram "d3d9 " {
+	Keywords { "POINT" "SHADOWS_OFF" }
+	3.SubProgram "gles " {
+	Keywords { "POINT" "SHADOWS_OFF" }
+	4.SubProgram "glesdesktop " {
+	Keywords { "POINT" "SHADOWS_OFF" }
+	5.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "SHADOWS_OFF" }
+	6.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "SHADOWS_OFF" }
+	7.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "SHADOWS_OFF" }
+	8.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "SHADOWS_OFF" }
+	9.SubProgram "opengl " {
+	Keywords { "SPOT" "SHADOWS_OFF" }
+	10.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_OFF" }
+	11.SubProgram "gles " {
+	Keywords { "SPOT" "SHADOWS_OFF" }
+	12.SubProgram "glesdesktop " {
+	Keywords { "SPOT" "SHADOWS_OFF" }
+	13.SubProgram "opengl " {
+	Keywords { "POINT_COOKIE" "SHADOWS_OFF" }
+	14.SubProgram "d3d9 " {
+	Keywords { "POINT_COOKIE" "SHADOWS_OFF" }
+	15.SubProgram "gles " {
+	Keywords { "POINT_COOKIE" "SHADOWS_OFF" }
+	16.SubProgram "glesdesktop " {
+	Keywords { "POINT_COOKIE" "SHADOWS_OFF" }
+	17.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_OFF" }
+	18.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_OFF" }
+	19.SubProgram "gles " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_OFF" }
+	20.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_OFF" }
+	21.SubProgram "opengl " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" }
+	22.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" }
+	23.SubProgram "gles " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" }
+	24.SubProgram "glesdesktop " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" }
+	25.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_NATIVE" }
+	26.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" }
+	27.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" }
+	28.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" }
+	29.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" }
+	30.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_SCREEN" }
+	31.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_SCREEN" }
+	32.SubProgram "gles " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_SCREEN" }
+	33.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_SCREEN" }
+	34.SubProgram "opengl " {
+	Keywords { "POINT" "SHADOWS_CUBE" }
+	35.SubProgram "d3d9 " {
+	Keywords { "POINT" "SHADOWS_CUBE" }
+	36.SubProgram "gles " {
+	Keywords { "POINT" "SHADOWS_CUBE" }
+	37.SubProgram "glesdesktop " {
+	Keywords { "POINT" "SHADOWS_CUBE" }
+	38.SubProgram "opengl " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" }
+	39.SubProgram "d3d9 " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" }
+	40.SubProgram "gles " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" }
+	41.SubProgram "glesdesktop " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" }
+	42.SubProgram "opengl " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" }
+	43.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" }
+	44.SubProgram "gles " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" }
+	45.SubProgram "glesdesktop " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" }
+	46.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" "SHADOWS_NATIVE" }
+	47.SubProgram "opengl " {
+	Keywords { "POINT" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	48.SubProgram "d3d9 " {
+	Keywords { "POINT" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	49.SubProgram "gles " {
+	Keywords { "POINT" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	50.SubProgram "glesdesktop " {
+	Keywords { "POINT" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	51.SubProgram "opengl " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	52.SubProgram "d3d9 " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	53.SubProgram "gles " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	54.SubProgram "glesdesktop " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+###
+###Program "fp" {
+	1.SubProgram "opengl " {
+	Keywords { "POINT" "SHADOWS_OFF" }
+	2.SubProgram "d3d9 " {
+	Keywords { "POINT" "SHADOWS_OFF" }
+	3.SubProgram "gles " {
+	Keywords { "POINT" "SHADOWS_OFF" }
+	4.SubProgram "glesdesktop " {
+	Keywords { "POINT" "SHADOWS_OFF" }
+	5.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "SHADOWS_OFF" }
+	6.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "SHADOWS_OFF" }
+	7.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "SHADOWS_OFF" }
+	8.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "SHADOWS_OFF" }
+	9.SubProgram "opengl " {
+	Keywords { "SPOT" "SHADOWS_OFF" }
+	10.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_OFF" }
+	11.SubProgram "gles " {
+	Keywords { "SPOT" "SHADOWS_OFF" }
+	12.SubProgram "glesdesktop " {
+	Keywords { "SPOT" "SHADOWS_OFF" }
+	13.SubProgram "opengl " {
+	Keywords { "POINT_COOKIE" "SHADOWS_OFF" }
+	14.SubProgram "d3d9 " {
+	Keywords { "POINT_COOKIE" "SHADOWS_OFF" }
+	15.SubProgram "gles " {
+	Keywords { "POINT_COOKIE" "SHADOWS_OFF" }
+	16.SubProgram "glesdesktop " {
+	Keywords { "POINT_COOKIE" "SHADOWS_OFF" }
+	17.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_OFF" }
+	18.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_OFF" }
+	19.SubProgram "gles " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_OFF" }
+	20.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_OFF" }
+	21.SubProgram "opengl " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" }
+	22.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" }
+	23.SubProgram "gles " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" }
+	24.SubProgram "glesdesktop " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" }
+	25.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_NATIVE" }
+	26.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" }
+	27.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" }
+	28.SubProgram "gles " {
+	Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" }
+	29.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" }
+	30.SubProgram "opengl " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_SCREEN" }
+	31.SubProgram "d3d9 " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_SCREEN" }
+	32.SubProgram "gles " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_SCREEN" }
+	33.SubProgram "glesdesktop " {
+	Keywords { "DIRECTIONAL_COOKIE" "SHADOWS_SCREEN" }
+	34.SubProgram "opengl " {
+	Keywords { "POINT" "SHADOWS_CUBE" }
+	35.SubProgram "d3d9 " {
+	Keywords { "POINT" "SHADOWS_CUBE" }
+	36.SubProgram "gles " {
+	Keywords { "POINT" "SHADOWS_CUBE" }
+	37.SubProgram "glesdesktop " {
+	Keywords { "POINT" "SHADOWS_CUBE" }
+	38.SubProgram "opengl " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" }
+	39.SubProgram "d3d9 " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" }
+	40.SubProgram "gles " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" }
+	41.SubProgram "glesdesktop " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" }
+	42.SubProgram "opengl " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" }
+	43.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" }
+	44.SubProgram "gles " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" }
+	45.SubProgram "glesdesktop " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" }
+	46.SubProgram "d3d9 " {
+	Keywords { "SPOT" "SHADOWS_DEPTH" "SHADOWS_SOFT" "SHADOWS_NATIVE" }
+	47.SubProgram "opengl " {
+	Keywords { "POINT" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	48.SubProgram "d3d9 " {
+	Keywords { "POINT" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	49.SubProgram "gles " {
+	Keywords { "POINT" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	50.SubProgram "glesdesktop " {
+	Keywords { "POINT" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	51.SubProgram "opengl " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	52.SubProgram "d3d9 " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	53.SubProgram "gles " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" "SHADOWS_SOFT" }
+	54.SubProgram "glesdesktop " {
+	Keywords { "POINT_COOKIE" "SHADOWS_CUBE" "SHADOWS_SOFT" }

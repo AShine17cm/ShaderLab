@@ -1,0 +1,4 @@
+1.Caster和Receiver必须被放到正确的图层上
+2.如果不使用Decal贴图，这意味着所有的Caster可以被 Batch到一个DrawCall中，无论在那种渲染路径下
+3.如果使用Alpha贴图，但是将这些Alpha贴图放进一个大的Atlas中的话，仍然可以被Batch，进行批处理
+4.小心Cascade Shadows,如果不batch的话
