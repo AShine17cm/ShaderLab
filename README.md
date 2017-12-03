@@ -6,3 +6,6 @@ Generally, we won't update older project version, so if we'd like to add feature
 ## Notice  
 Select branch which matches your Unity platform. The minimum version required for our project is 5.6.0, you may download 2017.2 instead and it should be compatible with 5.6.x  
 We won't support Unity versions before 5.6.0.
+## Last But Not Least  
+You're very welcomed if you find bugs in our book and/or our project, please give us PR or report to us.  
+Thanks~!
