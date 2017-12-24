@@ -1,13 +1,15 @@
-﻿Shader "Unlit/Receiver_back 1" {
-	Properties {
-		_MainTex ("Albedo (RGB)", 2D) = "white" {}
-	}
-	SubShader {
-		Tags { "RenderType"="Opaque" }
-		LOD 200
-	Pass {
-		Name "FORWARD"
-		Tags { "LightMode" = "ForwardBase" }
+﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
+
+Shader "Unlit/Receiver_back 1" {
+    Properties {
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+    }
+    SubShader {
+        Tags { "RenderType"="Opaque" }
+        LOD 200
+    Pass {
+        Name "FORWARD"
+        Tags { "LightMode" = "ForwardBase" }
 
 CGPROGRAM
 // compile directives
@@ -41,39 +43,39 @@ CGPROGRAM
 #ifdef DUMMY_PREPROCESSOR_TO_WORK_AROUND_HLSL_COMPILER_LINE_HANDLING
 #endif
 /* UNITY: Original start of shader */
-		// Physically based Standard lighting model, and enable shadows on all light types
-		//#pragma surface surf Standard fullforwardshadows
+        // Physically based Standard lighting model, and enable shadows on all light types
+        //#pragma surface surf Standard fullforwardshadows
 
-		// Use shader model 3.0 target, to get nicer looking lighting
-		//#pragma target 3.0
+        // Use shader model 3.0 target, to get nicer looking lighting
+        //#pragma target 3.0
 
-		sampler2D _MainTex;
+        sampler2D _MainTex;
 
-		struct Input {
-			float2 uv_MainTex;
-		};
+        struct Input {
+            float2 uv_MainTex;
+        };
 
-		half _Glossiness;
-		half _Metallic;
-		fixed4 _Color;
+        half _Glossiness;
+        half _Metallic;
+        fixed4 _Color;
 
-		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
-		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
-		// //#pragma instancing_options assumeuniformscaling
-		UNITY_INSTANCING_CBUFFER_START(Props)
-			// put more per-instance properties here
-		UNITY_INSTANCING_CBUFFER_END
+        // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
+        // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
+        // //#pragma instancing_options assumeuniformscaling
+        UNITY_INSTANCING_BUFFER_START(Props)
+            // put more per-instance properties here
+        UNITY_INSTANCING_BUFFER_END(Props)
 
-		void surf (Input IN, inout SurfaceOutputStandard o) {
-			// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = c.rgb;
-			// Metallic and smoothness come from slider variables
-			o.Metallic = _Metallic;
-			o.Smoothness = _Glossiness;
-			o.Alpha = c.a;
-		}
-		
+        void surf (Input IN, inout SurfaceOutputStandard o) {
+            // Albedo comes from a texture tinted by color
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+            o.Albedo = c.rgb;
+            // Metallic and smoothness come from slider variables
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        
 
 // vertex-to-fragment interpolation data
 // no lightmaps:
@@ -285,39 +287,39 @@ fixed4 frag_surf (v2f_surf IN) : SV_Target {
 #ifdef DUMMY_PREPROCESSOR_TO_WORK_AROUND_HLSL_COMPILER_LINE_HANDLING
 #endif
 /* UNITY: Original start of shader */
-		// Physically based Standard lighting model, and enable shadows on all light types
-		//#pragma surface surf Standard fullforwardshadows
+        // Physically based Standard lighting model, and enable shadows on all light types
+        //#pragma surface surf Standard fullforwardshadows
 
-		// Use shader model 3.0 target, to get nicer looking lighting
-		//#pragma target 3.0
+        // Use shader model 3.0 target, to get nicer looking lighting
+        //#pragma target 3.0
 
-		sampler2D _MainTex;
+        sampler2D _MainTex;
 
-		struct Input {
-			float2 uv_MainTex;
-		};
+        struct Input {
+            float2 uv_MainTex;
+        };
 
-		half _Glossiness;
-		half _Metallic;
-		fixed4 _Color;
+        half _Glossiness;
+        half _Metallic;
+        fixed4 _Color;
 
-		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
-		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
-		// //#pragma instancing_options assumeuniformscaling
-		UNITY_INSTANCING_CBUFFER_START(Props)
-			// put more per-instance properties here
-		UNITY_INSTANCING_CBUFFER_END
+        // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
+        // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
+        // //#pragma instancing_options assumeuniformscaling
+        UNITY_INSTANCING_BUFFER_START(Props)
+            // put more per-instance properties here
+        UNITY_INSTANCING_BUFFER_END(Props)
 
-		void surf (Input IN, inout SurfaceOutputStandard o) {
-			// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = c.rgb;
-			// Metallic and smoothness come from slider variables
-			o.Metallic = _Metallic;
-			o.Smoothness = _Glossiness;
-			o.Alpha = c.a;
-		}
-		
+        void surf (Input IN, inout SurfaceOutputStandard o) {
+            // Albedo comes from a texture tinted by color
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+            o.Albedo = c.rgb;
+            // Metallic and smoothness come from slider variables
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        
 
 // vertex-to-fragment interpolation data
 // no lightmaps:
@@ -500,6 +502,6 @@ ENDCG
 
 #LINE 45
 
-	}
-	FallBack "Diffuse"
+    }
+    FallBack "Diffuse"
 }
