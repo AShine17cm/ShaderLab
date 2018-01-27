@@ -1,8 +1,6 @@
 # ShaderLab_2017  
-## Version Info
-This project is based on Unity 2017.3, Only compatible with Unity 2017.3
 ## Introductions  
-This is the code for the book: Unity 3D ShaderLab Development Practice Introduction  
+This is the code for the book: Unity 3D ShaderLab Development Practice Introduction, 3rd version.  
 We've prepared multiple branch version for Unity version, because some version of Unity could not compatible with older project, so please select proper version to fit with your platform.  
 Generally, we won't update older project version, so if we'd like to add features, it's much properly in the latest version project.  
 ## Notice  
