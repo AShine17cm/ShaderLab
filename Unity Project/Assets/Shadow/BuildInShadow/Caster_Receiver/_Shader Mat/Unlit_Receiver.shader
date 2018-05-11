@@ -1,13 +1,13 @@
 ﻿Shader "Unlit/Receiver" {
-	Properties {
-		_MainTex ("Albedo (RGB)", 2D) = "white" {}
-	}
-	SubShader {
-		Tags { "RenderType"="Opaque" "DisableBatching"="false" "IgnoreProjector"="True"}
-		LOD 200
-	Pass {
-		Name "FORWARD"
-		Tags { "LightMode" = "ForwardBase" }
+    Properties {
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+    }
+    SubShader {
+        Tags { "RenderType"="Opaque" "DisableBatching"="false" "IgnoreProjector"="True"}
+        LOD 200
+    Pass {
+        Name "FORWARD"
+        Tags { "LightMode" = "ForwardBase" }
 
 CGPROGRAM
 // compile directives
@@ -32,7 +32,7 @@ CGPROGRAM
 
 sampler2D _MainTex;
 struct Input {
-	float2 uv_MainTex;
+    float2 uv_MainTex;
 };
 // vertex-to-fragment interpolation data
 // no lightmaps:
@@ -83,17 +83,17 @@ fixed4 frag_surf (v2f_surf IN) : SV_Target {
   half3 Albedo = tex2D(_MainTex,IN.pack0.xy).rgb;
   half3 Normal = IN.worldNormal;
 
-	fixed atten = UNITY_SHADOW_ATTENUATION(IN, worldPos);
-	half3 litColor=atten;// _LightColor0.rgb;
-	//half3 sh = ShadeSHPerPixel (Normal, giInput.ambient, giInput.worldPos);
-	Normal = normalize(Normal);
+    fixed atten = UNITY_SHADOW_ATTENUATION(IN, worldPos);
+    half3 litColor=atten;// _LightColor0.rgb;
+    //half3 sh = ShadeSHPerPixel (Normal, giInput.ambient, giInput.worldPos);
+    Normal = normalize(Normal);
 
-	half outputAlpha;
-	half nl = saturate(dot(Normal, lightDir));
-	//litColor=litColor* nl;
-	//litColor=max(0.2,litColor);
-	half4 c4=half4(litColor*Albedo,1);
-	c4.a = outputAlpha;
+    half outputAlpha;
+    half nl = saturate(dot(Normal, lightDir));
+    //litColor=litColor* nl;
+    //litColor=max(0.2,litColor);
+    half4 c4=half4(litColor*Albedo,1);
+    c4.a = outputAlpha;
   UNITY_APPLY_FOG(IN.fogCoord, c4); // apply fog
   //UNITY_OPAQUE_ALPHA(c4.a);
   return c4;
@@ -102,6 +102,6 @@ fixed4 frag_surf (v2f_surf IN) : SV_Target {
 ENDCG
 }
 
-	}
-	FallBack "Diffuse"
+    }
+    FallBack "Diffuse"
 }
