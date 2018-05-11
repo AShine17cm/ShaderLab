@@ -1,4 +1,6 @@
 # ShaderLab_2017  
+## Version Info
+This branch is based on Unity 2018.1
 ## Introductions  
 This is the code for the book: Unity 3D ShaderLab Development Practice Introduction, 3rd version.  
 We've prepared multiple branch version for Unity version, because some version of Unity could not compatible with older project, so please select proper version to fit with your platform.  
