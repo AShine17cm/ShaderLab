@@ -1,6 +1,6 @@
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Particles/Anim Alpha Blended" {
+Shader "Particles/Additive" {
 Properties {
     _TintColor ("Tint Color", Color) = (0.5,0.5,0.5,0.5)
     _MainTex ("Particle Texture", 2D) = "white" {}
@@ -9,7 +9,7 @@ Properties {
 
 Category {
     Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" "PreviewType"="Plane" }
-    Blend SrcAlpha OneMinusSrcAlpha
+    Blend SrcAlpha One
     ColorMask RGB
     Cull Off Lighting Off ZWrite Off
 
@@ -31,8 +31,7 @@ Category {
             struct appdata_t {
                 float4 vertex : POSITION;
                 fixed4 color : COLOR;
-                float4 texcoords : TEXCOORD0;
-                float texcoordBlend : TEXCOORD1;
+                float2 texcoord : TEXCOORD0;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
@@ -40,11 +39,9 @@ Category {
                 float4 vertex : SV_POSITION;
                 fixed4 color : COLOR;
                 float2 texcoord : TEXCOORD0;
-                float2 texcoord2 : TEXCOORD1;
-                fixed blend : TEXCOORD2;
-                UNITY_FOG_COORDS(3)
+                UNITY_FOG_COORDS(1)
                 #ifdef SOFTPARTICLES_ON
-                float4 projPos : TEXCOORD4;
+                float4 projPos : TEXCOORD2;
                 #endif
                 UNITY_VERTEX_OUTPUT_STEREO
             };
@@ -61,10 +58,8 @@ Category {
                 o.projPos = ComputeScreenPos (o.vertex);
                 COMPUTE_EYEDEPTH(o.projPos.z);
                 #endif
-                o.color = v.color * _TintColor;
-                o.texcoord = TRANSFORM_TEX(v.texcoords.xy,_MainTex);
-                o.texcoord2 = TRANSFORM_TEX(v.texcoords.zw,_MainTex);
-                o.blend = v.texcoordBlend;
+                o.color = v.color;
+                o.texcoord = TRANSFORM_TEX(v.texcoord,_MainTex);
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
@@ -81,10 +76,10 @@ Category {
                 i.color.a *= fade;
                 #endif
 
-                fixed4 colA = tex2D(_MainTex, i.texcoord);
-                fixed4 colB = tex2D(_MainTex, i.texcoord2);
-                fixed4 col = 2.0f * i.color * lerp(colA, colB, i.blend);
-                UNITY_APPLY_FOG(i.fogCoord, col);
+                fixed4 col = 2.0f * i.color * _TintColor * tex2D(_MainTex, i.texcoord);
+                col.a = saturate(col.a); // alpha should not have double-brightness applied to it, but we can't fix that legacy behaior without breaking everyone's effects, so instead clamp the output to get sensible HDR behavior (case 967476)
+
+                UNITY_APPLY_FOG_COLOR(i.fogCoord, col, fixed4(0,0,0,0)); // fog towards black due to our blend mode
                 return col;
             }
             ENDCG
