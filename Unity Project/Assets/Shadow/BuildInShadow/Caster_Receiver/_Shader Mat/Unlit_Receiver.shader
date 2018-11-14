@@ -20,7 +20,7 @@ CGPROGRAM
 #include "UnityShaderVariables.cginc"
 #include "UnityShaderUtilities.cginc"
 
-#define UNITY_PASS_FORWARDBASE
+//#define UNITY_PASS_FORWARDBASE
 #include "UnityCG.cginc"
 #include "Lighting.cginc"
 #include "UnityPBSLighting.cginc"
