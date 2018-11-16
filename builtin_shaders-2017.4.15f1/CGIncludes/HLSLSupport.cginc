@@ -84,17 +84,17 @@
 #   endif
 #endif
 #if !defined(SV_Target1)
-#   if !defined(SHADER_API_XBOXONE)
+#   if !defined(SHADER_API_XBOXONE) && !defined(SHADER_API_PSP2)
 #       define SV_Target1 COLOR1
 #   endif
 #endif
 #if !defined(SV_Target2)
-#   if !defined(SHADER_API_XBOXONE)
+#   if !defined(SHADER_API_XBOXONE) && !defined(SHADER_API_PSP2)
 #       define SV_Target2 COLOR2
 #   endif
 #endif
 #if !defined(SV_Target3)
-#   if !defined(SHADER_API_XBOXONE)
+#   if !defined(SHADER_API_XBOXONE) && !defined(SHADER_API_PSP2)
 #       define SV_Target3 COLOR3
 #   endif
 #endif
@@ -147,7 +147,7 @@
 
 // Define "fixed" precision to be half on non-GLSL platforms,
 // and sampler*_prec to be just simple samplers.
-#if !defined(SHADER_TARGET_GLSL) && !defined(SHADER_API_PSSL) && !defined(SHADER_API_GLES3) && !defined(SHADER_API_VULKAN) && !(defined(SHADER_API_METAL) && defined(UNITY_COMPILER_HLSLCC))
+#if !defined(SHADER_TARGET_GLSL) && !defined(SHADER_API_PSSL) && !defined(SHADER_API_GLES3) && !defined(SHADER_API_VULKAN) && !(defined(SHADER_API_METAL) && defined(UNITY_COMPILER_HLSLCC)) && !defined(SHADER_API_SWITCH)
 #define fixed half
 #define fixed2 half2
 #define fixed3 half3
@@ -169,7 +169,7 @@
 #define Texture3D_half Texture3D
 #endif
 
-#if defined(SHADER_API_GLES3) || defined(SHADER_API_VULKAN) || (defined(SHADER_API_MOBILE) && defined(SHADER_API_METAL) && defined(UNITY_COMPILER_HLSLCC))
+#if defined(SHADER_API_GLES3) || defined(SHADER_API_VULKAN) || (defined(SHADER_API_MOBILE) && defined(SHADER_API_METAL) && defined(UNITY_COMPILER_HLSLCC)) || defined(SHADER_API_SWITCH)
 // GLES3 and later via HLSLcc, use DX11.1 partial precision for translation
 // we specifically define fixed to be float16 (same as half) as all new GPUs seems to agree on float16 being minimal precision float
 #define fixed min16float
@@ -210,7 +210,7 @@
 // This allows people to use min16float and friends in their shader code if they
 // really want to (making that will make shaders not load before DX11.1, e.g. on Win7,
 // but if they target WSA/WP exclusively that's fine).
-#if !defined(SHADER_API_D3D11) && !defined(SHADER_API_D3D11_9X) && !defined(SHADER_API_GLES3) && !defined(SHADER_API_VULKAN) && !(defined(SHADER_API_METAL) && defined(UNITY_COMPILER_HLSLCC))
+#if !defined(SHADER_API_D3D11) && !defined(SHADER_API_D3D11_9X) && !defined(SHADER_API_GLES3) && !defined(SHADER_API_VULKAN) && !(defined(SHADER_API_METAL) && defined(UNITY_COMPILER_HLSLCC)) && !defined(SHADER_API_SWITCH)
 #define min16float half
 #define min16float2 half2
 #define min16float3 half3
@@ -308,15 +308,15 @@
 // SAMPLE_DEPTH_TEXTURE_LOD(sampler,uv): sample with LOD level
 
 #if defined(SHADER_API_PSP2)
-    half4 SAMPLE_DEPTH_TEXTURE(sampler2D s, float4 uv) { return tex2D<float>(s, (float3)uv); }
-    half4 SAMPLE_DEPTH_TEXTURE(sampler2D s, float3 uv) { return tex2D<float>(s, uv); }
-    half4 SAMPLE_DEPTH_TEXTURE(sampler2D s, float2 uv) { return tex2D<float>(s, uv); }
+    half SAMPLE_DEPTH_TEXTURE(sampler2D s, float4 uv) { return tex2D<float>(s, (float3)uv); }
+    half SAMPLE_DEPTH_TEXTURE(sampler2D s, float3 uv) { return tex2D<float>(s, uv); }
+    half SAMPLE_DEPTH_TEXTURE(sampler2D s, float2 uv) { return tex2D<float>(s, uv); }
 #   define SAMPLE_DEPTH_TEXTURE_PROJ(sampler, uv) (tex2DprojShadow(sampler, uv))
 #   define SAMPLE_DEPTH_TEXTURE_LOD(sampler, uv) (tex2Dlod<float>(sampler, uv))
 #   define SAMPLE_RAW_DEPTH_TEXTURE(sampler, uv) SAMPLE_DEPTH_TEXTURE(sampler, uv)
 #   define SAMPLE_RAW_DEPTH_TEXTURE_PROJ(sampler, uv) SAMPLE_DEPTH_TEXTURE_PROJ(sampler, uv)
 #   define SAMPLE_RAW_DEPTH_TEXTURE_LOD(sampler, uv) SAMPLE_DEPTH_TEXTURE_LOD(sampler, uv)
-    half4 SAMPLE_DEPTH_CUBE_TEXTURE(samplerCUBE s, float3 uv) { return texCUBE<float>(s, uv); }
+    half SAMPLE_DEPTH_CUBE_TEXTURE(samplerCUBE s, float3 uv) { return texCUBE<float>(s, uv); }
 #else
     // Sample depth, just the red component.
 #   define SAMPLE_DEPTH_TEXTURE(sampler, uv) (tex2D(sampler, uv).r)

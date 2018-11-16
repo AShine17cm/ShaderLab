@@ -1,6 +1,6 @@
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Particles/Additive" {
+Shader "Particles/Alpha Blended" {
 Properties {
     _TintColor ("Tint Color", Color) = (0.5,0.5,0.5,0.5)
     _MainTex ("Particle Texture", 2D) = "white" {}
@@ -9,7 +9,7 @@ Properties {
 
 Category {
     Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" "PreviewType"="Plane" }
-    Blend SrcAlpha One
+    Blend SrcAlpha OneMinusSrcAlpha
     ColorMask RGB
     Cull Off Lighting Off ZWrite Off
 
@@ -58,7 +58,7 @@ Category {
                 o.projPos = ComputeScreenPos (o.vertex);
                 COMPUTE_EYEDEPTH(o.projPos.z);
                 #endif
-                o.color = v.color;
+                o.color = v.color * _TintColor;
                 o.texcoord = TRANSFORM_TEX(v.texcoord,_MainTex);
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
@@ -76,8 +76,10 @@ Category {
                 i.color.a *= fade;
                 #endif
 
-                fixed4 col = 2.0f * i.color * _TintColor * tex2D(_MainTex, i.texcoord);
-                UNITY_APPLY_FOG_COLOR(i.fogCoord, col, fixed4(0,0,0,0)); // fog towards black due to our blend mode
+                fixed4 col = 2.0f * i.color * tex2D(_MainTex, i.texcoord);
+                col.a = saturate(col.a); // alpha should not have double-brightness applied to it, but we can't fix that legacy behaior without breaking everyone's effects, so instead clamp the output to get sensible HDR behavior (case 967476)
+
+                UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
             }
             ENDCG
