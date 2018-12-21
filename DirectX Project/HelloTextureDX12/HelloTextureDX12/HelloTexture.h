@@ -153,7 +153,9 @@ inline UINT64 UpdateSubresources(
     for (UINT i = 0; i < NumSubresources; ++i)
     {
         if (pRowSizesInBytes[i] >(SIZE_T)-1) return 0;
-        D3D12_MEMCPY_DEST DestData = { pData + pLayouts[i].Offset, pLayouts[i].Footprint.RowPitch, pLayouts[i].Footprint.RowPitch * pNumRows[i] };
+        D3D12_MEMCPY_DEST DestData
+            = { pData + static_cast<BYTE>(pLayouts[i].Offset), static_cast<std::uint64_t>(pLayouts[i].Footprint.RowPitch),
+            static_cast<std::uint64_t>(pLayouts[i].Footprint.RowPitch) * static_cast<std::uint64_t>(pNumRows[i]) };
         MemcpySubresource(&DestData, &pSrcData[i], (SIZE_T)pRowSizesInBytes[i], pNumRows[i], pLayouts[i].Footprint.Depth);
     }
     pIntermediate->Unmap(0, NULL);

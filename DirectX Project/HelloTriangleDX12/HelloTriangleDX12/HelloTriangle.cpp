@@ -7,7 +7,12 @@ using namespace std;
 using namespace Microsoft::WRL;
 
 HelloTriangle::HelloTriangle(std::uint32_t width, std::uint32_t height)
-    :m_frameIndex(0), m_rtvDescriptorSize(0)
+    :m_frameIndex(0),
+    m_rtvDescriptorSize(0),
+    m_vertexBufferView({ 0 }),
+    m_fenceEvent(nullptr),
+    m_fenceValue(0),
+    m_useWarpDevice(false)
 {
     m_height = height;
     m_width = width;
@@ -37,9 +42,9 @@ void HelloTriangle::LoadPipeline()
 {
     // Enable the debug layer (requires the Graphics Tools "optional feature").
 #pragma region Enable debug layer
+    uint32_t dxgiFactoryFlags = 0;
     // NOTE: Enabling the debug layer after device creation will invalidate the active device.
 #if defined(_DEBUG)
-    uint32_t dxgiFactoryFlags = 0;
     // Enable debug layer
     ComPtr<ID3D12Debug1> debugController;
 
@@ -421,7 +426,8 @@ void HelloTriangle::PopulateCommandList()
 
     //D3D12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, m_rtvDescriptorSize);
     D3D12_CPU_DESCRIPTOR_HANDLE rtvHandle;
-    rtvHandle.ptr = m_rtvHeap->GetCPUDescriptorHandleForHeapStart().ptr + m_frameIndex * m_rtvDescriptorSize;
+    rtvHandle.ptr = m_rtvHeap->GetCPUDescriptorHandleForHeapStart().ptr
+        + static_cast<uint64_t>(m_frameIndex) * static_cast<uint64_t>(m_rtvDescriptorSize);
     m_commandList->OMSetRenderTargets(1, &rtvHandle, FALSE, nullptr);
 #pragma endregion
 
