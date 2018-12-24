@@ -1,5 +1,3 @@
-MIT License
-
 Copyright (c) 2017 - present Lucifer & Coresi7
 All rights reserved.
 ANY license in branches and tags voilated with the license in Master version should follow the master.
