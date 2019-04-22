@@ -22,7 +22,7 @@ Shader "Tut/SurfaceShader/Forward/Lab_5/fullforwardshadowsNoLM_VF" {
 		#pragma fragmentoption ARB_precision_hint_fastest
 		#pragma multi_compile_fwdbase nolightmap nodirlightmap
 		#include "HLSLSupport.cginc"
-		#define UNITY_PASS_FORWARDBASE
+		// #define UNITY_PASS_FORWARDBASE
 		#include "UnityCG.cginc"
 		#include "Lighting.cginc"
 		#include "AutoLight.cginc"
