@@ -1,7 +1,7 @@
 版权所有（c）2019-present Lucifer & Coresi7  
   
 ShaderLab工程代码也遵循反996许可证和MIT许可证  
-你可以在满足反996许可证和MIT许可证的前提下，使用这份代码，包括用于商业目的  
+你可以在满足反996许可证和MIT许可证的前提下，使用这份代码，包括用于商业目的，且无需付费或者注册  
   
 你可以在如下地址获得一个反996许可证最新版的拷贝  
 https://github.com/996icu/996.ICU/blob/master/LICENSE_CN  
