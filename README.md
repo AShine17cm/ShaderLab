@@ -2,7 +2,7 @@
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)  [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Version Info
-This branch is based on Unity 2018.3
+This branch is based on Unity 2019.1
 ## Introductions  
 This is the code for the book: Unity 3D ShaderLab Development Practice Introduction, 3rd version.  
 We've prepared multiple branch version for Unity version, because some version of Unity could not compatible with older project, so please select proper version to fit with your platform.  
