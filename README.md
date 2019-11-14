@@ -1,4 +1,4 @@
-# ShaderLab源码  
+# Unity 3D ShaderLab开发实战详解 第三版 源码  
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)  [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)  
 ## 版本信息  
 这个分支基于Unity 2019.1  
@@ -14,7 +14,7 @@
 如果发现了代码当中的问题，请及时提给我们PR或者联系我们（hpmlo@outlook.com）  
 不胜感激！  
 
-# ShaderLab  
+# The source code of Unity 3D ShaderLab Development Practice Introduction, 3rd version  
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)  [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Version Info
