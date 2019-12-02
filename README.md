@@ -1,7 +1,7 @@
 # Unity 3D ShaderLab开发实战详解 第三版 源码  
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)  [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)  
 ## 版本信息  
-这个分支基于Unity 2019.1  
+这个分支基于Unity 2019.2  
 ## 简介  
 这个Repo是《Unity3D ShaderLab开发实战详解（第3版）》的随书源码。  
 我们为多个Unity版本做了适配，新版本工程可能无法被老版本Unity兼容，所以你可以切换分支选择你想要的版本。  
@@ -18,7 +18,7 @@
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)  [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Version Info
-This branch is based on Unity 2019.1
+This branch is based on Unity 2019.2
 ## Introductions  
 This is the code for the book: Unity 3D ShaderLab Development Practice Introduction, 3rd version.  
 We've prepared multiple branch version for Unity version, because some version of Unity could not compatible with older project, so please select proper version to fit with your platform.  
