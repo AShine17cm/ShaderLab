@@ -29,3 +29,17 @@ We won't support Unity versions before 5.6.0.
 ## Last But Not Least  
 You're very welcomed if you find bugs in our book and/or our project, please give us PR or report to us.  
 Thanks~!  
+
+
+<span style="color:white">
+<p>For seo purpose</p>
+<p>Unity 3D ShaderLab开发实战详解</p>
+<p>源代码</p>
+<p>源码</p>
+<p>代码</p>
+<p>随书代码</p>
+<p>随书源码</p>
+<p>source code</p>
+<p>光盘</p>
+<p>工程</p>
+</span>
